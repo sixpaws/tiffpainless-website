@@ -1,14 +1,14 @@
 /* ===== Base ===== */
 :root {
-    --bg: #f5f3f0;
-    --bg-alt: #efe9e4;
-    --bg-card: #e8ddd5;
-    --text: #2d3e2d;
-    --text-muted: #5a6b5a;
-    --accent: #6b9e5f;
-    --accent-dark: #5a8a50;
-    --border: #d4c4b9;
-    --danger: #c85a5a;
+    --bg: #121712;
+    --bg-alt: #171d18;
+    --bg-card: #1d2520;
+    --text: #f0e8df;
+    --text-muted: #c9bdae;
+    --accent: #8e6b46;
+    --accent-dark: #775a3d;
+    --border: #2d3c34;
+    --danger: #a85a52;
     --radius: 6px;
     --max-width: 1100px;
 }
@@ -45,7 +45,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(245, 243, 240, 0.95);
+    background: rgba(18, 23, 18, 0.96);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
 }
@@ -113,13 +113,13 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #e8ddd5 0%, #efe9e4 100%);
+    background: linear-gradient(135deg, #1b211d 0%, #101510 100%);
     overflow: hidden;
 }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(107, 158, 95, 0.08) 0%, transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(142,107,70,0.12) 0%, transparent 60%);
 }
 .hero-content { position: relative; z-index: 1; }
 .hero-content h1 {
@@ -238,8 +238,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #e8ddd5, #efe9e4);
-    color: #8a8a8a;
+    background: linear-gradient(135deg, #1d2520, #171d18);
+    color: #8f8175;
     font-size: 1.2rem;
     font-family: 'IM Fell DW Pica', serif;
 }
@@ -448,7 +448,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 .form-group textarea {
     width: 100%;
     padding: 12px 14px;
-    background: var(--bg);
+    background: #131915;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     color: var(--text);
