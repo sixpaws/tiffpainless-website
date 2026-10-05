@@ -1,14 +1,14 @@
 /* ===== Base ===== */
 :root {
-    --bg: #0e0e0e;
-    --bg-alt: #161616;
-    --bg-card: #1c1c1c;
-    --text: #f0f0f0;
-    --text-muted: #999;
-    --accent: #c9a96e;
-    --accent-dark: #a8895a;
-    --border: #2a2a2a;
-    --danger: #e05050;
+    --bg: #f5f3f0;
+    --bg-alt: #efe9e4;
+    --bg-card: #e8ddd5;
+    --text: #2d3e2d;
+    --text-muted: #5a6b5a;
+    --accent: #6b9e5f;
+    --accent-dark: #5a8a50;
+    --border: #d4c4b9;
+    --danger: #c85a5a;
     --radius: 6px;
     --max-width: 1100px;
 }
@@ -21,14 +21,17 @@ body {
     font-family: 'IM Fell DW Pica', serif;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.8;
     font-weight: 300;
+    font-size: 1.1rem;
 }
 
 h1, h2, h3, .logo {
     font-family: 'IM Fell DW Pica', serif;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.03em;
+    font-style: italic;
+    text-transform: lowercase;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -42,7 +45,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(14, 14, 14, 0.95);
+    background: rgba(245, 243, 240, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
 }
@@ -55,7 +58,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--accent);
     text-decoration: none;
 }
@@ -69,7 +72,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .main-nav a {
     color: var(--text);
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-decoration: none;
@@ -110,13 +113,13 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%);
+    background: linear-gradient(135deg, #e8ddd5 0%, #efe9e4 100%);
     overflow: hidden;
 }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(201,169,110,0.08) 0%, transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(107, 158, 95, 0.08) 0%, transparent 60%);
 }
 .hero-content { position: relative; z-index: 1; }
 .hero-content h1 {
@@ -124,7 +127,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     margin-bottom: 8px;
 }
 .hero-tagline {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--accent);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -138,7 +141,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     padding: 12px 32px;
     margin: 6px;
     border-radius: var(--radius);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -160,7 +163,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 32px;
     color: var(--accent);
     font-family: 'IM Fell DW Pica', serif;
@@ -168,7 +171,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .intro-text {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
     max-width: 680px;
     margin: 0 auto;
@@ -196,8 +199,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     border-color: var(--accent);
     text-decoration: none;
 }
-.card h3 { color: var(--accent); margin-bottom: 8px; font-size: 1.2rem; }
-.card p { color: var(--text-muted); font-size: 0.95rem; }
+.card h3 { color: var(--accent); margin-bottom: 8px; font-size: 1.3rem; }
+.card p { color: var(--text-muted); font-size: 1.05rem; }
 .card-highlight { border-color: var(--accent); }
 
 /* ===== Page Header ===== */
@@ -207,8 +210,8 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     text-align: center;
     border-bottom: 1px solid var(--border);
 }
-.page-header h1 { font-size: 2.5rem; margin-bottom: 8px; }
-.page-header p { color: var(--text-muted); font-family: 'IM Fell DW Pica', serif; }
+.page-header h1 { font-size: 2.8rem; margin-bottom: 8px; }
+.page-header p { color: var(--text-muted); font-family: 'IM Fell DW Pica', serif; font-size: 1.15rem; }
 
 /* ===== Gallery ===== */
 .gallery {
@@ -235,14 +238,14 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #222, #1a1a1a);
-    color: #555;
-    font-size: 1.1rem;
+    background: linear-gradient(135deg, #e8ddd5, #efe9e4);
+    color: #8a8a8a;
+    font-size: 1.2rem;
     font-family: 'IM Fell DW Pica', serif;
 }
 .gallery-caption {
     padding: 10px 14px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     text-align: center;
     font-family: 'IM Fell DW Pica', serif;
@@ -252,6 +255,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     margin-top: 32px;
     color: var(--text-muted);
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 
 /* ===== FAQ ===== */
@@ -264,7 +268,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     border: none;
     color: var(--text);
     font-family: 'IM Fell DW Pica', serif;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-align: left;
     padding: 20px 0;
@@ -289,6 +293,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     transition: max-height 0.3s ease, padding 0.3s ease;
     color: var(--text-muted);
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .faq-answer.open {
     max-height: 500px;
@@ -299,6 +304,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     text-align: center;
     color: var(--text-muted);
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 
 /* ===== Aftercare ===== */
@@ -309,6 +315,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     margin-bottom: 32px;
     border-radius: 0 var(--radius) var(--radius) 0;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .callout-warn {
     border-left-color: var(--danger);
@@ -319,6 +326,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     counter-reset: step;
     margin: 20px 0 32px;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .care-steps li {
     counter-increment: step;
@@ -342,13 +350,14 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     font-weight: 600;
     font-size: 0.9rem;
 }
-h2 { color: var(--accent); margin: 36px 0 12px; font-size: 1.5rem; font-family: 'IM Fell DW Pica', serif; }
-h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'IM Fell DW Pica', serif; }
+h2 { color: var(--accent); margin: 36px 0 12px; font-size: 1.8rem; font-family: 'IM Fell DW Pica', serif; }
+h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'IM Fell DW Pica', serif; }
 
 .avoid-list, .care-list {
     list-style: none;
     margin: 16px 0;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .avoid-list li, .care-list li {
     padding: 10px 0 10px 24px;
@@ -378,17 +387,19 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
     padding: 40px;
     margin-bottom: 24px;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
-.form-card h2 { font-size: 1.6rem; margin-bottom: 24px; font-family: 'IM Fell DW Pica', serif; }
+.form-card h2 { font-size: 1.8rem; margin-bottom: 24px; font-family: 'IM Fell DW Pica', serif; }
 .form-line {
     margin: 14px 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'IM Fell DW Pica', serif;
 }
 .consent-list {
     list-style: none;
     margin: 16px 0;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .consent-list li {
     padding: 8px 0 8px 24px;
@@ -414,6 +425,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
     border-radius: var(--radius);
     padding: 36px;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .form-row {
     display: flex;
@@ -426,7 +438,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
 .form-group label {
     display: block;
     margin-bottom: 6px;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--text);
     font-family: 'IM Fell DW Pica', serif;
@@ -441,7 +453,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
     border-radius: var(--radius);
     color: var(--text);
     font-family: 'IM Fell DW Pica', serif;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     transition: border-color 0.2s;
 }
 .form-group input:focus,
@@ -457,7 +469,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
     gap: 12px;
 }
 .form-checkbox input { width: auto; margin-top: 5px; flex-shrink: 0; }
-.form-checkbox label { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; font-family: 'IM Fell DW Pica', serif; }
+.form-checkbox label { font-size: 1.05rem; color: var(--text-muted); font-weight: 400; font-family: 'IM Fell DW Pica', serif; }
 
 .form-success {
     text-align: center;
@@ -466,6 +478,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
     border: 1px solid var(--accent);
     border-radius: var(--radius);
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 .form-success h3 { color: var(--accent); margin-bottom: 12px; font-family: 'IM Fell DW Pica', serif; }
 
@@ -476,7 +489,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
     padding: 32px 0;
     text-align: center;
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-family: 'IM Fell DW Pica', serif;
 }
 .footer-links { margin-top: 8px; }
@@ -512,6 +525,6 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.15rem; font-family: 'I
 /* ===== Print ===== */
 @media print {
     .site-header, .site-footer, .form-actions, .page-header p { display: none; }
-    body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; }
-    .form-card { border: 1px solid #ccc; padding: 20px; }
+    body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
+    .form-card { border: 1px solid #999; padding: 20px; }
 }
