@@ -18,7 +18,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IM Fell DW Pica', serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
@@ -26,7 +26,7 @@ body {
 }
 
 h1, h2, h3, .logo {
-    font-family: 'Cinzel', serif;
+    font-family: 'IM Fell DW Pica', serif;
     font-weight: 600;
     letter-spacing: 0.03em;
 }
@@ -254,7 +254,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     background: none;
     border: none;
     color: var(--text);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IM Fell DW Pica', serif;
     font-size: 1.05rem;
     font-weight: 600;
     text-align: left;
