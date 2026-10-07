@@ -7,13 +7,13 @@
     <meta name="description" content="Frequently asked questions about getting a tattoo with Tiff Painless in New Jersey.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">tiffany vargas</a>
+            <a href="index.html" class="logo">Tiff Painless</a>
             <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -29,3 +29,96 @@
             </nav>
         </div>
     </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know before booking.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container content-narrow">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I book an appointment?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Head over to the <a href="contact.html">Book an Appointment</a> page and fill out the inquiry form. Include as much detail as possible — design idea, placement, size, and any reference images. I'll get back to you within 2–3 business days.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How much does a tattoo cost?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pricing depends on the design complexity, size, and placement. A starting fee applies to any new tattoo. I'll provide a custom quote once you submit your design idea and placement details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do you require a deposit?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, a non-refundable deposit reserves your appointment date. Details about deposit amount and payment methods will be discussed when your appointment is confirmed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Can I bring friends?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Support is great. Just keep the number reasonable—one or two friends is ideal so the space doesn't get too crowded and you can focus on the experience.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I prepare?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Get good sleep, eat a solid meal a few hours before, and wear comfortable, loose clothing. Avoid alcohol the night before and the day of. Bring your ID and payment method. Avoid lotion or oils on the area being tattooed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do you do cover-ups or touch-ups?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. Touch-ups within the first month are free. Cover-up work depends on the design. Send a photo of what you want covered and we'll discuss options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Tiff Painless Tattoo | New Jersey</p>
+            <p>
+                <a href="contact.html" class="btn btn-primary btn-small">Book Now</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                this.nextElementSibling.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
