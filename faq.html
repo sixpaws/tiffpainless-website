@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ — Tiffany Vargas Tattoo</title>
-    <meta name="description" content="Frequently asked questions about getting a tattoo with Tiffany Vargas in New Jersey.">
+    <title>FAQ — Tiff Painless Tattoo</title>
+    <meta name="description" content="Frequently asked questions about getting a tattoo with Tiff Painless in New Jersey.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
@@ -29,105 +29,3 @@
             </nav>
         </div>
     </header>
-
-    <section class="page-header">
-        <div class="container">
-            <h1>Frequently Asked Questions</h1>
-            <p>Answers to common questions about getting a tattoo</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container content-narrow">
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How do I book an appointment?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    You can submit your inquiry through our <a href="contact.html">contact form</a> or reach out directly. Let us know the design you're interested in, placement, and your availability. We'll get back to you as soon as possible to confirm your appointment.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    What are your pricing rates?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Pricing varies based on the complexity, size, and placement of your design. We offer custom pricing for each unique project. Please contact us with details about your desired tattoo for an accurate quote.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    Do you accept walk-ins?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    We typically work by appointment only to ensure the best experience for each client. Walk-ins may be accommodated depending on availability, but we recommend booking in advance.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How should I prepare for my appointment?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Get plenty of rest, eat a good meal before your appointment, and avoid alcohol the night before. Wear comfortable clothing and bring any references or sketches you'd like to discuss. Don't worry if you're nervous—we've worked with first-time clients before!
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    How long does a tattoo take?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    The duration depends on the size and complexity of your design. A small tattoo might take 30 minutes to an hour, while larger pieces could take several hours. We'll provide an estimate during your consultation.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    Can I bring a friend or family member?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Yes! Having a supportive friend in the room can help you feel more comfortable. However, we ask that observers be respectful and quiet during the tattooing process.
-                </div>
-            </div>
-
-            <p class="faq-note">
-                Have more questions? Feel free to <a href="contact.html">reach out</a> and we'll be happy to help!
-            </p>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Tiffany Vargas Tattoo · New Jersey</p>
-            <p class="footer-links">
-                <a href="portfolio.html">Portfolio</a> ·
-                <a href="faq.html">FAQ</a> ·
-                <a href="aftercare.html">Aftercare</a> ·
-                <a href="consent.html">Consent Forms</a> ·
-                <a href="contact.html">Book</a>
-            </p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                button.setAttribute('aria-expanded', !isExpanded);
-                answer.classList.toggle('open');
-            });
-        });
-    </script>
-</body>
-</html>
