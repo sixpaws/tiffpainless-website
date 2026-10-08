@@ -1,58 +1,543 @@
-
-/* Consent page layout polish */
-.consent-section {
-    padding-top: 52px;
+/* ===== Base ===== */
+:root {
+    --bg: #121712;
+    --bg-alt: #171d18;
+    --bg-card: #1d2520;
+    --text: #f0e8df;
+    --text-muted: #c9bdae;
+    --accent: #8e6b46;
+    --accent-dark: #775a3d;
+    --border: #2d3c34;
+    --danger: #a85a52;
+    --radius: 6px;
+    --max-width: 1100px;
 }
 
-.consent-layout {
-    max-width: 920px;
-    margin: 0 auto;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'IM Fell DW Pica', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dark); text-decoration: underline; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.content-narrow { max-width: 760px; }
+
+/* ===== Header ===== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(18, 23, 18, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 18px;
+    justify-content: space-between;
+    height: 64px;
 }
 
-.consent-card {
-    width: 100%;
-    max-width: 860px;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+.logo {
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.logo:hover { text-decoration: none; color: var(--accent-dark); }
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
 }
 
-.consent-card-header {
+.main-nav a {
+    color: var(--text);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: 'IM Fell DW Pica', serif;
+}
+.main-nav a:hover, .main-nav a.active { color: var(--accent); text-decoration: none; }
+
+.nav-cta {
+    background: var(--accent);
+    color: var(--bg) !important;
+    padding: 8px 18px;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+.nav-cta:hover { background: var(--accent-dark); }
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--text);
+    transition: 0.3s;
+}
+
+/* ===== Hero ===== */
+.hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 18px;
+    background: linear-gradient(135deg, #1b211d 0%, #101510 100%);
+    overflow: hidden;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(142,107,70,0.12) 0%, transparent 60%);
+}
+.hero-content { position: relative; z-index: 1; }
+.hero-content h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    margin-bottom: 8px;
+}
+.hero-tagline {
+    font-size: 1.3rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    font-family: 'IM Fell DW Pica', serif;
 }
 
-.consent-card-header h2 {
-    margin: 0;
-    font-size: 1.6rem;
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    margin: 6px;
+    border-radius: var(--radius);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    text-decoration: none;
+    font-family: 'IM Fell DW Pica', serif;
 }
+.btn-primary { background: var(--accent); color: var(--bg); }
+.btn-primary:hover { background: var(--accent-dark); color: var(--bg); text-decoration: none; }
+.btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn-outline:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+.btn-full { width: 100%; margin: 12px 0; }
 
-.embed-note {
+/* ===== Sections ===== */
+.section { padding: 72px 0; }
+.section-alt { background: var(--bg-alt); }
+
+.section-title {
     text-align: center;
-    max-width: 680px;
-    margin: 0 auto 18px;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+    color: var(--accent);
+    font-family: 'IM Fell DW Pica', serif;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.2rem;
     color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto;
+    font-family: 'IM Fell DW Pica', serif;
 }
 
-.embed-fallback {
-    margin-top: 12px;
-    font-size: 0.95rem;
+/* ===== Cards ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: transform 0.2s, border-color 0.2s;
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'IM Fell DW Pica', serif;
+}
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    text-decoration: none;
+}
+.card h3 { color: var(--accent); margin-bottom: 8px; font-size: 1.3rem; }
+.card p { color: var(--text-muted); font-size: 1.05rem; }
+.card-highlight { border-color: var(--accent); }
+
+/* ===== Page Header ===== */
+.page-header {
+    background: var(--bg-alt);
+    padding: 60px 0 40px;
     text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.page-header h1 { font-size: 2.8rem; margin-bottom: 8px; }
+.page-header p { color: var(--text-muted); font-family: 'IM Fell DW Pica', serif; font-size: 1.15rem; }
+
+/* ===== Gallery ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.gallery-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+.gallery-item:hover { border-color: var(--accent); }
+.gallery-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.gallery-placeholder {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1d2520, #171d18);
+    color: #8f8175;
+    font-size: 1.2rem;
+    font-family: 'IM Fell DW Pica', serif;
+}
+.gallery-caption {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+}
+.gallery-note {
+    text-align: center;
+    margin-top: 32px;
+    color: var(--text-muted);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
 }
 
-.consent-actions {
-    width: 100%;
-    margin-top: 4px;
+/* ===== FAQ ===== */
+.faq-item {
+    border-bottom: 1px solid var(--border);
 }
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s;
+}
+.faq-question:hover { color: var(--accent); }
+.faq-icon {
+    font-size: 1.4rem;
+    color: var(--accent);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--text-muted);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.faq-answer.open {
+    max-height: 500px;
+    padding-bottom: 20px;
+}
+.faq-note {
+    margin-top: 36px;
+    text-align: center;
+    color: var(--text-muted);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+
+/* ===== Aftercare ===== */
+.callout {
+    background: var(--bg-card);
+    border-left: 3px solid var(--accent);
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.callout-warn {
+    border-left-color: var(--danger);
+    margin-top: 32px;
+}
+.care-steps {
+    list-style: none;
+    counter-reset: step;
+    margin: 20px 0 32px;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.care-steps li {
+    counter-increment: step;
+    padding: 12px 0 12px 48px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+.care-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+h2 { color: var(--accent); margin: 36px 0 12px; font-size: 1.8rem; font-family: 'IM Fell DW Pica', serif; }
+h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'IM Fell DW Pica', serif; }
+
+.avoid-list, .care-list {
+    list-style: none;
+    margin: 16px 0;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.avoid-list li, .care-list li {
+    padding: 10px 0 10px 24px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+.avoid-list li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: var(--danger);
+    font-weight: 700;
+}
+.care-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ===== Consent Form ===== */
+.form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-bottom: 24px;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.form-card h2 { font-size: 1.8rem; margin-bottom: 24px; font-family: 'IM Fell DW Pica', serif; }
+.form-line {
+    margin: 14px 0;
+    font-size: 1.1rem;
+    font-family: 'IM Fell DW Pica', serif;
+}
+.consent-list {
+    list-style: none;
+    margin: 16px 0;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.consent-list li {
+    padding: 8px 0 8px 24px;
+    position: relative;
+}
+.consent-list li::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+    flex: 1;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    font-family: 'IM Fell DW Pica', serif;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: #131915;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.05rem;
+    transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.form-group textarea { resize: vertical; }
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.form-checkbox input { width: auto; margin-top: 5px; flex-shrink: 0; }
+.form-checkbox label { font-size: 1.05rem; color: var(--text-muted); font-weight: 400; font-family: 'IM Fell DW Pica', serif; }
+
+.form-success {
+    text-align: center;
+    padding: 48px;
+    background: var(--bg-card);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.1rem;
+}
+.form-success h3 { color: var(--accent); margin-bottom: 12px; font-family: 'IM Fell DW Pica', serif; }
+
+/* ===== Footer ===== */
+.site-footer {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-family: 'IM Fell DW Pica', serif;
+}
+.footer-links { margin-top: 8px; }
+.footer-links a { color: var(--text-muted); font-family: 'IM Fell DW Pica', serif; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .nav-toggle { display: flex; }
+    .main-nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    .main-nav.open { max-height: 400px; }
+    .main-nav ul {
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 16px;
+    }
+    .form-row { flex-direction: column; gap: 0; }
+    .form-card { padding: 24px; }
+    .contact-form { padding: 24px; }
+    .hero { min-height: 60vh; }
+}
+
+/* ===== Print ===== */
+.embed-note { margin-bottom: 16px; }
+.embed-frame { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff; }
+.embed-frame iframe { display: block; width: 100%; height: 800px; border: 0; }
+.embed-fallback { margin-top: 12px; font-size: 0.95rem; }
+.paper-copy { margin: 24px 0; }
+.paper-copy summary { cursor: pointer; font-weight: bold; margin-bottom: 16px; }
 
 @media (max-width: 768px) {
-    .consent-section {
-        padding-top: 36px;
-    }
+    .embed-frame iframe { height: 700px; }
+}
 
-    .consent-card {
-        padding: 24px;
-    }
+@media print {
+    .embed-card { display: none; }
+    .paper-copy > summary { display: none; }
+    .site-header, .site-footer, .form-actions, .page-header p { display: none; }
+    body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
+    .form-card { border: 1px solid #999; padding: 20px; }
 }
