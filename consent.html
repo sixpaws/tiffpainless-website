@@ -9,45 +9,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .stabpad-shell {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-            margin-top: 24px;
-        }
-
-        .stabpad-shell iframe {
-            width: 100%;
-            min-height: 1200px;
-            display: block;
-            border: 0;
-            background: #fff;
-        }
-
-        .consent-page-note {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Tiff Painless</a>
-            <a href="index.html" class="logo">tiffpainless</a>
             <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
-@@ -32,66 +56,30 @@
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="aftercare.html">Aftercare</a></li>
+                    <li><a href="consent.html" class="active">Consent Forms</a></li>
+                    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <section class="page-header">
         <div class="container">
             <h1>Consent Forms</h1>
-            <h1>consent forms</h1>
             <p>Please review before your appointment.</p>
         </div>
     </section>
@@ -56,7 +41,6 @@
         <div class="container content-narrow">
             <div class="callout">
                 <p>Please review the consent form below before your appointment. You can print and fill it out in advance, or complete one at the studio. A signed consent form and valid ID are <st[...]
-                <p>Please review and complete the waiver below before your appointment. Once submitted, bring a valid ID with you to the studio, and feel free to <a href="contact.html">reach out</a> if you have questions ahead of time.</p>
             </div>
 
             <div class="form-card">
@@ -97,27 +81,34 @@
                     <li>I release Tiff Painless Tattoo from any liability for complications arising from failure to follow aftercare instructions or from undisclosed medical conditions.</li>
                     <li>I consent to the tattoo procedure being performed by Tiff Painless and agree that the design, placement, and size have been discussed and approved by me prior to the proced[...]
                 </ul>
-            <p class="consent-page-note">Tattoo consent waiver</p>
 
                 <h3>Signatures</h3>
                 <p class="form-line">Client Signature: _____________________________________</p>
                 <p class="form-line">Date: ________________________________________________</p>
                 <p class="form-line">Artist Signature: _____________________________________</p>
                 <p class="form-line">Date: ________________________________________________</p>
-            <div class="stabpad-shell">
-                <iframe
-                    src="https://www.stabpad.com/sign/Tiffpainlesswaivers@gmail.com"
-                    title="Tiff Painless tattoo consent form"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
             </div>
 
             <div class="form-actions">
                 <button class="btn btn-primary" onclick="window.print()">Print This Form</button>
                 <a href="contact.html" class="btn btn-outline">Book an Appointment</a>
-            <div class="form-actions" style="margin-top: 24px;">
-                <a href="contact.html" class="btn btn-outline">Back to booking</a>
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Tiff Painless LLC · New Jersey</p>
+            <p class="footer-links">
+                <a href="portfolio.html">Portfolio</a> ·
+                <a href="faq.html">FAQ</a> ·
+                <a href="aftercare.html">Aftercare</a> ·
+                <a href="consent.html">Consent Forms</a> ·
+                <a href="contact.html">Book</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
