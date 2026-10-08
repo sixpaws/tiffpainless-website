@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .stabpad-shell {
         .consent-intro {
             text-align: center;
             margin-bottom: 24px;
@@ -54,17 +55,25 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+            margin-top: 24px;
             min-height: 900px;
         }
 
+        .stabpad-shell iframe {
         .consent-embed iframe {
             width: 100%;
+            min-height: 1200px;
             min-height: 900px;
             display: block;
             border: 0;
             background: #fff;
         }
 
+        .consent-page-note {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
         @media (max-width: 768px) {
             .consent-card {
                 padding: 16px 12px 12px;
@@ -86,22 +95,43 @@
         }
     </style>
 </head>
-<body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">tiffany vargas</a>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="aftercare.html">Aftercare</a></li>
-                    <li><a href="consent.html" class="active">Consent Forms</a></li>
-                    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
-                </ul>
-            </nav>
+@@ -63,23 +115,26 @@
+
+    <section class="section">
+        <div class="container content-narrow">
+            <div class="callout">
+                <p>Please review and complete the waiver below before your appointment. Once submitted, bring a valid ID with you to the studio, and feel free to <a href="contact.html">reach out</a> if you have questions ahead of time.</p>
+            </div>
+            <p class="consent-intro">Please complete the waiver below before your appointment. Bring a valid photo ID with you to the studio.</p>
+
+            <p class="consent-page-note">Tattoo consent waiver</p>
+            <div class="consent-card">
+                <div class="consent-header">
+                    <h2>tattoo waiver</h2>
+                    <a href="https://www.stabpad.com/sign/Tiffpainlesswaivers@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">open in new tab</a>
+                </div>
+
+            <div class="stabpad-shell">
+                <iframe
+                    src="https://www.stabpad.com/sign/Tiffpainlesswaivers@gmail.com"
+                    title="Tiff Painless tattoo consent form"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="consent-embed">
+                    <iframe
+                        src="https://www.stabpad.com/sign/Tiffpainlesswaivers@gmail.com"
+                        title="Tiff Painless tattoo waiver"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="form-actions" style="margin-top: 24px;">
+                <a href="contact.html" class="btn btn-outline">Back to booking</a>
+            <div class="consent-actions">
+                <a href="contact.html" class="btn btn-primary">Back to booking</a>
+            </div>
         </div>
-    </header>
+    </section>
