@@ -40,10 +40,21 @@
     <section class="section">
         <div class="container content-narrow">
             <div class="callout">
-                <p>Please review the consent form below before your appointment. You can print and fill it out in advance, or complete one at the studio. A signed consent form and valid ID are <st[...]
+                <p>Please review and sign the consent form below before your appointment, or print a paper copy to complete at the studio. A signed consent form and valid ID are <st[...]
             </div>
 
-            <div class="form-card">
+            <div class="form-card embed-card">
+                <h2>Tattoo Consent &amp; Release Form</h2>
+                <p class="embed-note">You can review and sign the form right here on this page. Your signed copy goes straight to the studio.</p>
+                <div class="embed-frame">
+                    <iframe src="https://www.stabpad.com/sign/tiffpainlesswaivers@gmail.com" title="Tiff Painless Tattoo consent form" loading="lazy"></iframe>
+                </div>
+                <p class="embed-fallback">Form not loading? <a href="https://www.stabpad.com/sign/tiffpainlesswaivers@gmail.com" target="_blank" rel="noopener">Open the consent form in a new tab</a>.</p>
+            </div>
+
+            <details class="paper-copy" id="paper-copy">
+                <summary>Prefer paper? View the printable copy</summary>
+            <div class="form-card print-only-card">
                 <h2>Tattoo Consent & Release Form</h2>
 
                 <h3>Client Information</h3>
@@ -89,8 +100,11 @@
                 <p class="form-line">Date: ________________________________________________</p>
             </div>
 
+            </details>
+
             <div class="form-actions">
-                <button class="btn btn-primary" onclick="window.print()">Print This Form</button>
+                <button class="btn btn-primary" onclick="document.getElementById('paper-copy').open = true; window.print()">Print Paper Copy</button>
+                <a href="https://www.stabpad.com/sign/tiffpainlesswaivers@gmail.com" target="_blank" rel="noopener" class="btn btn-outline">Open Form in New Tab</a>
                 <a href="contact.html" class="btn btn-outline">Book an Appointment</a>
             </div>
         </div>
