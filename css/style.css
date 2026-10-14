@@ -390,7 +390,9 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     font-size: 1.1rem;
 }
 .form-card h2 { font-size: 1.8rem; margin-bottom: 24px; font-family: 'IM Fell DW Pica', serif; }
-.form-line {
+.form-line  {
+    text-align: center;
+}
     margin: 14px 0;
     font-size: 1.1rem;
     font-family: 'IM Fell DW Pica', serif;
