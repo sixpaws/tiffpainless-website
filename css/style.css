@@ -591,7 +591,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     object-position: center;
     margin: 0 auto 28px;
     border: 1px solid #78252b;
-    border-radius: 2px;
+    border-radius: 110px 110px 0 0;
     box-shadow:
         0 0 15px rgba(120, 37, 43, 0.18),
         0 10px 35px rgba(0, 0, 0, 0.5);
