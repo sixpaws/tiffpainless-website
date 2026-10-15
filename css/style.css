@@ -45,7 +45,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(18, 23, 18, 0.96);
+    background: rgba(18, 23, 18, 0.78);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
 }
@@ -159,7 +159,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Sections ===== */
 .section { padding: 72px 0; }
-.section-alt { background: var(--bg-alt); }
+.section-alt { background: rgba(23, 29, 24, 0.78); }
 
 .section-title {
     text-align: center;
@@ -185,7 +185,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     gap: 20px;
 }
 .card {
-    background: var(--bg-card);
+    background: rgba(29, 37, 32, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 28px;
@@ -205,7 +205,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Page Header ===== */
 .page-header {
-    background: var(--bg-alt);
+    background: rgba(23, 29, 24, 0.78);
     padding: 60px 0 40px;
     text-align: center;
     border-bottom: 1px solid var(--border);
@@ -220,7 +220,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     gap: 20px;
 }
 .gallery-item {
-    background: var(--bg-card);
+    background: rgba(29, 37, 32, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
@@ -309,7 +309,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Aftercare ===== */
 .callout {
-    background: var(--bg-card);
+    background: rgba(29, 37, 32, 0.82);
     border-left: 3px solid var(--accent);
     padding: 18px 24px;
     margin-bottom: 32px;
@@ -381,7 +381,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Consent Form ===== */
 .form-card {
-    background: var(--bg-card);
+    background: rgba(29, 37, 32, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 40px;
@@ -421,7 +421,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Contact Form ===== */
 .contact-form {
-    background: var(--bg-card);
+    background: rgba(29, 37, 32, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 36px;
@@ -449,7 +449,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 .form-group textarea {
     width: 100%;
     padding: 12px 14px;
-    background: #131915;
+    background: rgba(19, 25, 21, 0.85);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     color: var(--text);
@@ -475,7 +475,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 .form-success {
     text-align: center;
     padding: 48px;
-    background: var(--bg-card);
+    background: rgba(29, 37, 32, 0.82);
     border: 1px solid var(--accent);
     border-radius: var(--radius);
     font-family: 'IM Fell DW Pica', serif;
@@ -485,7 +485,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Footer ===== */
 .site-footer {
-    background: var(--bg-alt);
+    background: rgba(23, 29, 24, 0.78);
     border-top: 1px solid var(--border);
     padding: 32px 0;
     text-align: center;
@@ -505,7 +505,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
         top: 64px;
         left: 0;
         right: 0;
-        background: var(--bg);
+        background: rgba(18, 23, 18, 0.95);
         border-bottom: 1px solid var(--border);
         max-height: 0;
         overflow: hidden;
