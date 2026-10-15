@@ -19,7 +19,11 @@ html { scroll-behavior: smooth; }
 
 body {
     font-family: 'IM Fell DW Pica', serif;
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image: url("/images/background.PNG");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    background-position: top center;
     color: var(--text);
     line-height: 1.8;
     font-weight: 300;
@@ -113,15 +117,28 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #1b211d 0%, #101510 100%);
+    background: transparent;
     overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 10, 9, 0.84);
+    z-index: 0;
 }
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: radial-gradient(ellipse at center, rgba(142,107,70,0.12) 0%, transparent 60%);
+    opacity: 0.35;
+    z-index: 1;
 }
-.hero-content { position: relative; z-index: 1; }
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+}
 .hero-content h1 {
     font-size: clamp(2.5rem, 7vw, 5rem);
     margin-bottom: 8px;
@@ -159,7 +176,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Sections ===== */
 .section { padding: 72px 0; }
-.section-alt { background: rgba(23, 29, 24, 0.78); }
+.section-alt { background: rgba(10, 12, 11, 0.78); }
 
 .section-title {
     text-align: center;
@@ -185,7 +202,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     gap: 20px;
 }
 .card {
-    background: rgba(29, 37, 32, 0.82);
+    background: rgba(10, 12, 11, 0.94);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 28px;
@@ -220,7 +237,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     gap: 20px;
 }
 .gallery-item {
-    background: rgba(29, 37, 32, 0.82);
+    background: rgba(10, 12, 11, 0.94);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
@@ -264,7 +281,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 .faq-question {
     width: 100%;
-    background: none;
+    background: rgba(10, 12, 11, 0.92);
     border: none;
     color: var(--text);
     font-family: 'IM Fell DW Pica', serif;
@@ -276,9 +293,12 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
 }
-.faq-question:hover { color: var(--accent); }
+.faq-question:hover {
+    color: var(--accent);
+    background: rgba(10, 12, 11, 0.98);
+}
 .faq-icon {
     font-size: 1.4rem;
     color: var(--accent);
@@ -309,7 +329,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Aftercare ===== */
 .callout {
-    background: rgba(29, 37, 32, 0.82);
+    background: rgba(10, 12, 11, 0.94);
     border-left: 3px solid var(--accent);
     padding: 18px 24px;
     margin-bottom: 32px;
@@ -330,6 +350,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 .care-steps li {
     counter-increment: step;
+    background: rgba(10, 12, 11, 0.72);
     padding: 12px 0 12px 48px;
     position: relative;
     border-bottom: 1px solid var(--border);
@@ -361,6 +382,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 }
 .avoid-list li, .care-list li {
     padding: 10px 0 10px 24px;
+    background: rgba(10, 12, 11, 0.72);
     position: relative;
     border-bottom: 1px solid var(--border);
 }
@@ -381,7 +403,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Consent Form ===== */
 .form-card {
-    background: rgba(29, 37, 32, 0.82);
+    background: rgba(10, 12, 11, 0.94);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 40px;
@@ -421,7 +443,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Contact Form ===== */
 .contact-form {
-    background: rgba(29, 37, 32, 0.82);
+    background: rgba(10, 12, 11, 0.94);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 36px;
@@ -475,7 +497,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 .form-success {
     text-align: center;
     padding: 48px;
-    background: rgba(29, 37, 32, 0.82);
+    background: rgba(10, 12, 11, 0.94);
     border: 1px solid var(--accent);
     border-radius: var(--radius);
     font-family: 'IM Fell DW Pica', serif;
@@ -521,24 +543,38 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     .form-card { padding: 24px; }
     .contact-form { padding: 24px; }
     .hero { min-height: 60vh; }
+    .embed-frame iframe { height: 700px; }
+    .consent-section { padding: 16px 0 32px; }
+    .consent-layout.container { padding: 0 8px; }
+    .consent-card {
+        padding: 16px 10px;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    .consent-card .embed-frame { border-radius: 4px; }
+    .consent-card .embed-frame iframe {
+        height: 90vh;
+        min-height: 600px;
+    }
+    .consent-actions .btn {
+        width: 100%;
+        margin: 6px 0;
+        padding: 16px;
+    }
 }
 
-/* ===== Print ===== */
+@media (max-width: 600px) {
+    body { background-size: 150px 150px; }
+    .hero::before { background: rgba(5, 7, 6, 0.9); }
+}
+
+/* ===== Embeds ===== */
 .embed-note { margin-bottom: 16px; }
 .embed-frame { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff; }
 .embed-frame iframe { display: block; width: 100%; height: 800px; border: 0; }
 .embed-fallback { margin-top: 12px; font-size: 0.95rem; }
 
-@media (max-width: 768px) {
-    .embed-frame iframe { height: 700px; }
-}
-
-@media print {
-    .embed-card { display: none; }
-    .site-header, .site-footer, .form-actions, .page-header p { display: none; }
-    body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
-    .form-card { border: 1px solid #999; padding: 20px; }
-}
 /* Gothic portrait above Tiffpainless */
 .hero-image {
     display: block;
@@ -552,17 +588,16 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     box-shadow:
         0 0 15px rgba(120, 37, 43, 0.18),
         0 10px 35px rgba(0, 0, 0, 0.5);
-    filter: grayscale(100%) contrast(1.12) brightness(0.85)
+    filter: grayscale(100%) contrast(1.12) brightness(0.85);
 }
+
 /* ===== Consent page (StabPad embed) ===== */
 .consent-section { padding: 40px 0 56px; }
-
 .consent-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .consent-card {
     width: 100%;
     max-width: 820px;
@@ -575,112 +610,35 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     color: var(--text-muted);
 }
 .consent-card h2 { margin-top: 0; }
-
 .consent-card .embed-frame {
     width: 100%;
     margin: 0 auto;
 }
 .consent-card .embed-frame iframe {
-    height: 85vh;          /* tall so there's less scrolling inside the form */
+    height: 85vh;
     min-height: 700px;
 }
-
 .consent-actions {
     width: 100%;
     max-width: 820px;
     justify-content: center;
 }
 
-@media (max-width: 768px) {
-    .consent-section { padding: 16px 0 32px; }
-
-    /* let the form use nearly the full screen width */
-    .consent-layout.container { padding: 0 8px; }
-    .consent-card {
-        padding: 16px 10px;
-        border-radius: 0;
-        border-left: 0;
-        border-right: 0;
-    }
-    .consent-card .embed-frame {
-        border-radius: 4px;
-    }
-    .consent-card .embed-frame iframe {
-        height: 90vh;
-        min-height: 600px;
-    }
-    .consent-actions .btn {
-        width: 100%;
-        margin: 6px 0;
-        padding: 16px;     /* bigger tap targets */
-    }
-}
-
 .site-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;          /* space between text and images */
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
 }
-
 .site-title .title-icon {
-  width: 200px;        /* adjust size */
-  height: 200px;
-  object-fit: contain;
-}
-/* ===== Repeating gothic pattern ===== */
-body {
-    background-color: #121712;
-    background-image: url("/images/background.PNG");
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    background-position: top center;
-}
-/* Let the gothic pattern show through the hero (behind "tiffpainless") */
-.hero {
-    background: transparent;
-}
-/* Smaller pattern on phones */
-@media (max-width: 600px) {
-    body {
-        background-size: 150px 150px;
-
-
-        /* ===== Readability overlays ===== */
-
-/* Let body pattern show in hero, then darken for text legibility */
-.hero {
-    background: transparent;
-}
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(18, 23, 18, 0.5);
-    z-index: 0;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
-/* Keep hero content above darkening layer */
-.hero-overlay,
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-/* Darken aftercare content blocks */
-.callout,
-.care-steps li,
-.avoid-list li,
-.care-list li {
-    background: rgba(18, 23, 18, 0.68);
-}
-
-/* Darken FAQ question rows */
-.faq-question {
-    background: rgba(18, 23, 18, 0.68);
-    transition: color 0.2s, background-color 0.2s;
-}
-.faq-question:hover {
-    background: rgba(18, 23, 18, 0.78);
-}
-    }
+/* ===== Print ===== */
+@media print {
+    .embed-card { display: none; }
+    .site-header, .site-footer, .form-actions, .page-header p { display: none; }
+    body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
+    .form-card { border: 1px solid #999; padding: 20px; }
 }
