@@ -623,8 +623,8 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 }
 
 .site-title .title-icon {
-  width: 150px;        /* adjust size */
-  height: 150px;
+  width: 200px;        /* adjust size */
+  height: 200px;
   object-fit: contain;
 }
 /* ===== Repeating gothic pattern ===== */
