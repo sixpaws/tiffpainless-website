@@ -616,7 +616,17 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     }
 }
 
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;          /* space between text and images */
+}
 
+.site-title .title-icon {
+  width: 40px;        /* adjust size */
+  height: 40px;
+  object-fit: contain;
+}
 /* ===== Repeating gothic pattern ===== */
 body {
     background-color: #121712;
