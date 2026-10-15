@@ -615,3 +615,19 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
         padding: 16px;     /* bigger tap targets */
     }
 }
+
+/* Repeating gothic pattern */
+body {
+    background-color: #0b0b0b;
+    background-image: url("/images/Untitled_Artwork.png");
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    background-position: top center;
+}
+
+/* Smaller pattern on phones */
+@media (max-width: 600px) {
+    body {
+        background-size: 105px 105px;
+    }
+}
