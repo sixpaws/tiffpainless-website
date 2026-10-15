@@ -616,8 +616,10 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
     }
 }
 
-/* Repeating gothic pattern */
+
+/* ===== Repeating gothic pattern ===== */
 body {
+    background-color: var(--bg);
     background-image: url("/images/Untitled_Artwork.png");
     background-repeat: repeat;
     background-size: 250px 250px;
