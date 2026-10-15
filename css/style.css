@@ -643,5 +643,44 @@ body {
 @media (max-width: 600px) {
     body {
         background-size: 150px 150px;
+
+
+        /* ===== Readability overlays ===== */
+
+/* Let body pattern show in hero, then darken for text legibility */
+.hero {
+    background: transparent;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 23, 18, 0.5);
+    z-index: 0;
+}
+
+/* Keep hero content above darkening layer */
+.hero-overlay,
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Darken aftercare content blocks */
+.callout,
+.care-steps li,
+.avoid-list li,
+.care-list li {
+    background: rgba(18, 23, 18, 0.68);
+}
+
+/* Darken FAQ question rows */
+.faq-question {
+    background: rgba(18, 23, 18, 0.68);
+    transition: color 0.2s, background-color 0.2s;
+}
+.faq-question:hover {
+    background: rgba(18, 23, 18, 0.78);
+}
     }
 }
