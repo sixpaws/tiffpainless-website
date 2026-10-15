@@ -124,7 +124,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(8, 10, 9, 0.84);
+    background: rgba(8, 10, 9, 0.6);
     z-index: 0;
 }
 .hero-overlay {
@@ -176,7 +176,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Sections ===== */
 .section { padding: 72px 0; }
-.section-alt { background: rgba(10, 12, 11, 0.78); }
+.section-alt { background: rgba(10, 12, 11, 0.6); }
 
 .section-title {
     text-align: center;
@@ -189,7 +189,11 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 .intro-text {
     text-align: center;
     font-size: 1.2rem;
-    color: var(--text-muted);
+    color: var(--text);
+    background: rgba(18, 23, 18, 0.82);
+    padding: 20px 24px;
+    border-radius: 8px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
     max-width: 680px;
     margin: 0 auto;
     font-family: 'IM Fell DW Pica', serif;
@@ -202,7 +206,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     gap: 20px;
 }
 .card {
-    background: rgba(10, 12, 11, 0.94);
+    background: rgba(18, 23, 18, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 28px;
@@ -237,7 +241,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     gap: 20px;
 }
 .gallery-item {
-    background: rgba(10, 12, 11, 0.94);
+    background: rgba(18, 23, 18, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
@@ -281,14 +285,14 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 .faq-question {
     width: 100%;
-    background: rgba(10, 12, 11, 0.92);
+    background: rgba(18, 23, 18, 0.82);
     border: none;
     color: var(--text);
     font-family: 'IM Fell DW Pica', serif;
     font-size: 1.2rem;
     font-weight: 600;
     text-align: left;
-    padding: 20px 0;
+    padding: 20px 16px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -297,7 +301,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 .faq-question:hover {
     color: var(--accent);
-    background: rgba(10, 12, 11, 0.98);
+    background: rgba(18, 23, 18, 0.95);
 }
 .faq-icon {
     font-size: 1.4rem;
@@ -311,13 +315,16 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    color: var(--text-muted);
+    background: rgba(18, 23, 18, 0.82);
+    padding: 0 16px;
+    color: var(--text);
     font-family: 'IM Fell DW Pica', serif;
     font-size: 1.1rem;
 }
 .faq-answer.open {
     max-height: 500px;
     padding-bottom: 20px;
+    padding-top: 4px;
 }
 .faq-note {
     margin-top: 36px;
@@ -329,7 +336,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ===== Aftercare ===== */
 .callout {
-    background: rgba(10, 12, 11, 0.94);
+    background: rgba(18, 23, 18, 0.82);
     border-left: 3px solid var(--accent);
     padding: 18px 24px;
     margin-bottom: 32px;
@@ -350,7 +357,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 }
 .care-steps li {
     counter-increment: step;
-    background: rgba(10, 12, 11, 0.72);
+    background: rgba(10, 12, 11, 0.55);
     padding: 12px 0 12px 48px;
     position: relative;
     border-bottom: 1px solid var(--border);
@@ -382,7 +389,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 }
 .avoid-list li, .care-list li {
     padding: 10px 0 10px 24px;
-    background: rgba(10, 12, 11, 0.72);
+    background: rgba(10, 12, 11, 0.55);
     position: relative;
     border-bottom: 1px solid var(--border);
 }
@@ -403,7 +410,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Consent Form ===== */
 .form-card {
-    background: rgba(10, 12, 11, 0.94);
+    background: rgba(18, 23, 18, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 40px;
@@ -443,7 +450,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 /* ===== Contact Form ===== */
 .contact-form {
-    background: rgba(10, 12, 11, 0.94);
+    background: rgba(18, 23, 18, 0.82);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 36px;
@@ -497,7 +504,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 .form-success {
     text-align: center;
     padding: 48px;
-    background: rgba(10, 12, 11, 0.94);
+    background: rgba(18, 23, 18, 0.82);
     border: 1px solid var(--accent);
     border-radius: var(--radius);
     font-family: 'IM Fell DW Pica', serif;
@@ -566,7 +573,7 @@ h3 { color: var(--text); margin: 24px 0 8px; font-size: 1.35rem; font-family: 'I
 
 @media (max-width: 600px) {
     body { background-size: 150px 150px; }
-    .hero::before { background: rgba(5, 7, 6, 0.9); }
+    .hero::before { background: rgba(5, 7, 6, 0.7); }
 }
 
 /* ===== Embeds ===== */
