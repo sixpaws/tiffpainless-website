@@ -635,7 +635,10 @@ body {
     background-size: 250px 250px;
     background-position: top center;
 }
-
+/* Let the gothic pattern show through the hero (behind "tiffpainless") */
+.hero {
+    background: transparent;
+}
 /* Smaller pattern on phones */
 @media (max-width: 600px) {
     body {
