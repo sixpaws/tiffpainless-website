@@ -767,3 +767,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .card:focus-visible {
     body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
     .form-card { border: 1px solid #999; padding: 20px; }
 }
+
+@media (max-width: 768px) {
+  .welcome-title {
+    color: red;
+  }
+}
