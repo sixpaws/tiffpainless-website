@@ -843,6 +843,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .card:focus-visible {
 @media print {
     .embed-card { display: none; }
     .site-header, .site-footer, .form-actions, .page-header p { display: none; }
+    .reveal { opacity: 1; transform: none; }
     body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
     .form-card { border: 1px solid #999; padding: 20px; }
 }
