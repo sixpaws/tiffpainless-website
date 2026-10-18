@@ -13,6 +13,45 @@
     --max-width: 1100px;
 }
 
+/* ===== Scroll reveals and ink-inspired details ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1),
+        border-color 0.2s ease, box-shadow 0.25s ease;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+.card.reveal.is-visible:hover { transform: translateY(-4px); }
+.gallery-item.reveal.is-visible:hover { transform: translateY(-3px); }
+
+.card-grid > .card:nth-child(2), .gallery > .gallery-item:nth-child(2), .shop-grid > .shop-card:nth-child(2) { transition-delay: 70ms, 70ms, 0s, 0s; }
+.card-grid > .card:nth-child(3), .gallery > .gallery-item:nth-child(3), .shop-grid > .shop-card:nth-child(3) { transition-delay: 140ms, 140ms, 0s, 0s; }
+.card-grid > .card:nth-child(4), .gallery > .gallery-item:nth-child(4), .shop-grid > .shop-card:nth-child(4) { transition-delay: 210ms, 210ms, 0s, 0s; }
+.gallery > .gallery-item:nth-child(5) { transition-delay: 280ms, 280ms, 0s, 0s; }
+.gallery > .gallery-item:nth-child(6) { transition-delay: 350ms, 350ms, 0s, 0s; }
+
+.section-title::after, .page-header h1::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 1px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, transparent, var(--accent), #78252b, transparent);
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.7s ease 0.2s;
+}
+.section-title.reveal::after, .page-header.reveal h1::after { transform: scaleX(0); }
+.section-title.is-visible::after, .page-header.is-visible h1::after { transform: scaleX(1); }
+
+.hero-content > .hero-image {
+    animation: rise-in 0.8s ease-out both, portrait-drift 8s ease-in-out 0.8s infinite;
+}
+@keyframes portrait-drift {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -5px; }
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -761,11 +800,12 @@ a, .btn, .card, .gallery-item, .faq-question, .nav-toggle {
 .main-nav a.active:not(.nav-cta) { background-size: 100% 1px; }
 
 .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); }
-.btn:active { transform: translateY(0); box-shadow: none; }
+.btn:active { transform: scale(0.97) translateY(0); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); }
 .nav-cta:hover { transform: translateY(-1px); }
 .card:hover, .gallery-item:hover { box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(142, 107, 70, 0.25); }
 .gallery-item:hover { transform: translateY(-3px); }
-.gallery-item img { transition: transform 0.4s ease; }
+.gallery-item img { filter: grayscale(20%) saturate(0.88); transition: transform 0.4s ease, filter 0.4s ease; }
+.gallery-item:hover img, .gallery-item:focus-within img { filter: grayscale(0) saturate(1); }
 .gallery-item:hover img { transform: scale(1.03); }
 .gallery-item { overflow: hidden; }
 
@@ -803,6 +843,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .card:focus-visible {
 @media print {
     .embed-card { display: none; }
     .site-header, .site-footer, .form-actions, .page-header p { display: none; }
+    .reveal { opacity: 1; transform: none; }
     body { background: white; color: black; font-family: 'IM Fell DW Pica', serif; font-size: 1.1rem; }
     .form-card { border: 1px solid #999; padding: 20px; }
 }

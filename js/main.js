@@ -4,6 +4,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    // Reveal key content as it enters the viewport
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.page-header, .section-title, .intro-text, .card, .gallery-item, .shop-card, .callout')
+            .forEach(function (element) {
+                element.classList.add('reveal');
+                revealObserver.observe(element);
+            });
+    }
+
     // Mobile navigation
     var navToggle = document.querySelector('.nav-toggle');
     var mainNav = document.querySelector('.main-nav');
